@@ -1,13 +1,13 @@
 #pragma once
 #include <anui/core.h>
 #include <string>
-#include <ANUI/Point.h>
-#include <ANUI/Size.h>
+#include <anui/Point.h>
+#include <anui/Size.h>
 #include <anui/events.h>
 #include <typeindex>
 #include <functional>
 #include <string_view>
-#include <ANUI/constraints.h>
+#include <anui/constraints.h>
 
 ANUI_BEGIN
 

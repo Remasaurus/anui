@@ -1,4 +1,4 @@
-#include <Anui/core.h>
+#include <anui/core.h>
 
 ANUI_BEGIN
 

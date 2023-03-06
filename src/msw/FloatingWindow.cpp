@@ -1,7 +1,7 @@
-#include <ANUI/FloatingWindow.h>
+#include <anui/FloatingWindow.h>
 #include <string_view>
 #include <anui/msw/Windows.h>
-#include <ANUI/msw/windef.h>
+#include <anui/msw/windef.h>
 
 #define WND(hwnd) static_cast<HWND>(hwnd)
 #define INSTANCE(instance) static_cast<HINSTANCE>(instance)

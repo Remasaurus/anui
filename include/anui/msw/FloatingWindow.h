@@ -1,5 +1,5 @@
 #pragma once
-#include <Anui/msw/windef.h>
+#include <anui/msw/windef.h>
 
 class MSWFloatingWindow : public FloatingWindowBase {
 public:
@@ -39,4 +39,4 @@ private:
 
 };
 
-#include <Anui/msw/winundef.h>
+#include <anui/msw/winundef.h>
