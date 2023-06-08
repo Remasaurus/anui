@@ -1,4 +1,0 @@
-
-class MSWWindow : public WindowBase {
-
-};
