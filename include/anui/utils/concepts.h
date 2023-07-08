@@ -3,28 +3,30 @@
 #include <concepts>
 
 ANUI_BEGIN
-namespace impl {
+namespace impl
+{
     template <class, template <class> class>
-    struct is_instance {
+    struct is_instance
+    {
         static constexpr bool value = false;
     };
 
     template <class T, template <class> class U>
-    struct is_instance<U<T>, U> {
+    struct is_instance<U<T>, U>
+    {
         static constexpr bool value = true;
     };
 
 }; // impl
 
-namespace utils {
+namespace utils
+{
 
-template<class T, template<typename> typename U>
-concept is_templated_instance = impl::is_instance<T, U>::value;
+    template <class T, template <typename> typename U>
+    concept is_templated_instance = impl::is_instance<T, U>::value;
 
-
-template<typename T, typename... Trest>    
-concept is_one_of = (std::same_as<T, Trest> || ...);
-
+    template <typename T, typename... Trest>
+    concept is_one_of = (std::same_as<T, Trest> || ...);
 
 } // utils
 ANUI_END

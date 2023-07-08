@@ -1,10 +1,13 @@
-cmake_minimum_required(VERSION 3.24.0)
+cmake_minimum_required(VERSION 3.20.0)
 
 project(anui)
 
+set(CMAKE_CXX_STANDARD 23)
 
 
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
+
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+    message(STATUS "DEBUG")
     enable_testing()
     add_subdirectory(tests)
 endif()
@@ -18,12 +21,12 @@ set(OS_COMPILE_DEFINITION ANUI_WIN32)
 elseif(APPLE)
 message(STATUS ">>> Compiling for Apple with COCOA")
 set(OS cocoa)
-set(OS_COMPILE_DEFINITION ANUI_COCOA)
+set(OS_COMPILE_DEFINITION ANUI_APPLE)
 
 elseif(UNIX)
 message(STATUS ">>> Compiling for Linux with x11")
 set(OS x11)
-set(OS_COMPILE_DEFINITION ANUI_X11)
+set(OS_COMPILE_DEFINITION ANUI_UNIX)
 
 else()
 message(FATAL_ERROR "ANUI cant recognize operating system :(")
@@ -47,7 +50,7 @@ PUBLIC
 option(CONSOLE "Create int main and log everything to the console instead of a popup window" ON)
 set(CONSOLE ON)
 
-target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_23)
+#target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_23)
 
 target_compile_definitions(${PROJECT_NAME} PUBLIC ${OS_COMPILE_DEFINITION})
 
