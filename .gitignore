@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Testing
+tests
+
+# Compile commands used by the compiler (I use neovim on arch btw)
+compile_commands.json

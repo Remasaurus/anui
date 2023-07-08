@@ -2,6 +2,14 @@ cmake_minimum_required(VERSION 3.24.0)
 
 project(anui)
 
+
+
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
+
+
 if(WIN32)
 message(STATUS ">>> Compiling for Windows with WIN32")
 set(OS msw)
@@ -21,12 +29,13 @@ else()
 message(FATAL_ERROR "ANUI cant recognize operating system :(")
 endif()
 
+
 add_library(${PROJECT_NAME} 
-    ./src/${OS}/Window.cpp
-    ./src/${OS}/FloatingWindow.cpp 
-    "src/events.cpp"
-    "src/${OS}/Application.cpp"
-    "src/${OS}/keyboard.cpp"
+     ./src/${OS}/window.cpp
+    #./src/${OS}/FloatingWindow.cpp 
+    #"src/events.cpp"
+    #"src/${OS}/Application.cpp"
+    #"src/${OS}/keyboard.cpp"
 )
 
 target_include_directories(${PROJECT_NAME}
