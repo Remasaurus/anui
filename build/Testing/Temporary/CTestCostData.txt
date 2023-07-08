@@ -1,3 +1,0 @@
-MyTest 0 0
-TestWindowing 2 0.00248029
----

@@ -1,8 +1,0 @@
-/home/Daniel/Dev/Anui/build/CMakeFiles/anui.dir
-/home/Daniel/Dev/Anui/build/CMakeFiles/test.dir
-/home/Daniel/Dev/Anui/build/CMakeFiles/edit_cache.dir
-/home/Daniel/Dev/Anui/build/CMakeFiles/rebuild_cache.dir
-/home/Daniel/Dev/Anui/build/tests/CMakeFiles/TestWindowing.dir
-/home/Daniel/Dev/Anui/build/tests/CMakeFiles/test.dir
-/home/Daniel/Dev/Anui/build/tests/CMakeFiles/edit_cache.dir
-/home/Daniel/Dev/Anui/build/tests/CMakeFiles/rebuild_cache.dir
