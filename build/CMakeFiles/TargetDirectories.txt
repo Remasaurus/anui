@@ -1,6 +1,0 @@
-C:/Users/Daniel/Programmeren/Anui/build/CMakeFiles/RUN_TESTS.dir
-C:/Users/Daniel/Programmeren/Anui/build/CMakeFiles/anui.dir
-C:/Users/Daniel/Programmeren/Anui/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Daniel/Programmeren/Anui/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/Daniel/Programmeren/Anui/build/tests/CMakeFiles/TestWindowing.dir
-C:/Users/Daniel/Programmeren/Anui/build/tests/CMakeFiles/RUN_TESTS.dir
