@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.20.0)
 project(anui)
 
 set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
 if(WIN32)
@@ -24,11 +25,8 @@ endif()
 
 
 add_library(${PROJECT_NAME} 
-     # ./src/${OS}/window.cpp
-    #./src/${OS}/FloatingWindow.cpp 
-    #"src/events.cpp"
-    #"src/${OS}/Application.cpp"
-    #"src/${OS}/keyboard.cpp"
+	./src/unit.cpp
+	./src/event_handler.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
@@ -63,7 +61,7 @@ target_compile_definitions(${PROJECT_NAME}
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
 
-	add_executable(basic_example ./examples/basic.cpp)
+	add_executable(basic_example ./examples/test.cpp)
 
 	target_link_libraries(basic_example anui)
 
