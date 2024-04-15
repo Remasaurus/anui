@@ -6,7 +6,7 @@
 
 using namespace anui::unit_literals;
 
-void lol(float x) {
+void lol(const float x) {
 	std::cout << "lol(float) was given " << x << std::endl;
 }
 
@@ -17,12 +17,12 @@ public:
 		bind(lol);
 		bind(&Window::print, this);
 		bind([](char x) {
-			std::cout << "Booba char x: " << x << std::endl;
+			std::cout << "char x: " << x << std::endl;
 		});
 	}
 
 
-	void print(int x) const {
+	void print(const int& x) const {
 		std::cout << "Hello from print! x: " << x << std::endl;
 	}
 
@@ -31,6 +31,10 @@ private:
 
 };
 
+void o(const float& x) {
+	std::cout << "New function for x: " << x << std::endl;
+}
+
 int main() {
 
 	float x = 3.14159;
@@ -38,10 +42,29 @@ int main() {
 	char z = 'b';
 
 	Window window;
+	std::function p([](const float& x) {
+		std::cout << "New function for x: " << x << std::endl;
+	});
 
 	window.send(x);
 	window.send(y);
 	window.send(z);
+
+	window.bind(o);
+
+	float& d = x;
+	window.send(d);
+		
+	const char* str= "Hjskadh";
+	window.send(str);
+
+	window.bind(p);
+
+	window.send(x);
+	
+
+
+
 
 	return 0;
 }
